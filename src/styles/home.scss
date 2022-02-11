@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@700&family=Lovers+Quarrel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BenchNine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&family=Space+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+$bg-color: #9456F9;
+$alt-text: #E03813;
+$star-yellow: #F9CA56;
+
+:root{
+    --main-color: #E03813;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $star-yellow;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #E03813;
+}
+
+body {
+  color: #000300;
+  font-family:"Anton", sans-serif;
+  background-color: $star-yellow;
+}
+
+.main-container{
+  ul{
+      scroll-behavior: smooth;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      padding-left: 10vw;
+      box-sizing: border-box;
+      overflow: auto;
+  }
+}
