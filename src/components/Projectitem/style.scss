@@ -15,18 +15,26 @@
         height: clamp(250px, 20vw, 20vw );
         object-fit: cover;
         pointer-events: none;
-        transition: transform 0.8s cubic-bezier(0.95, 0.05, 0.795, 0.035) ease-in-out;
-        transition-duration: 1.3s; 
+        transition: transform 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035) ease-in-out;
+        transition-duration: 0.9s; 
     }
 
 
     .menu-title{
-        font-family: "Hamlet", sans-serif;
+        font-family: "myFirstFont", sans-serif;
         font-size: 6.6vw;
         text-transform: lowercase;
         font-weight: 600;
         z-index: 1;
         line-height: 1.1;
+        transition-duration: 2s;
+
+        &:hover{
+             font-size: 8.8vw;
+             color: var(--main-color);
+             transition: transform 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035) ease-in-out;
+             transition-duration: 0.9s;
+        }
     }
 
     .info-block{

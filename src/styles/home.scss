@@ -6,6 +6,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../../fonts/george-x-regular.woff2);
+}
+
 $bg-color: #9456F9;
 $alt-text: #E03813;
 $star-yellow: #F9CA56;
@@ -26,7 +32,9 @@ $star-yellow: #F9CA56;
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $star-yellow;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
 }
 
 /* Handle on hover */
@@ -37,7 +45,8 @@ $star-yellow: #F9CA56;
 body {
   color: #000300;
   font-family:"Anton", sans-serif;
-  background-color: $star-yellow;
+  background-color: #C8BDA9;
+  ;
 }
 
 .main-container{
