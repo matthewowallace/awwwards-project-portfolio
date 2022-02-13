@@ -23,7 +23,8 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-feather": "^2.0.9"
+    "react-feather": "^2.0.9",
+    "react-hot-loader": "^4.13.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

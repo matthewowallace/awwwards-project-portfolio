@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: myFirstFont;
-  src: url(../../fonts/george-x-regular.woff2);
+  src: url(../../fonts/Gilroy-ExtraBold.otf);
 }
 
 $bg-color: #9456F9;
@@ -17,12 +17,12 @@ $alt-text: #E03813;
 $star-yellow: #F9CA56;
 
 :root{
-    --main-color: #E03813;
+    --main-color: #f51ec6bb;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
 }
 
 /* Track */
@@ -43,9 +43,9 @@ $star-yellow: #F9CA56;
 }
 
 body {
-  color: #000300;
+  color: #303030;
   font-family:"Anton", sans-serif;
-  background-color: #C8BDA9;
+  background-color: #fff;
   ;
 }
 
@@ -58,5 +58,6 @@ body {
       padding-left: 10vw;
       box-sizing: border-box;
       overflow: auto;
+      overflow-x: hidden;
   }
 }
