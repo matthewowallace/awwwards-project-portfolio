@@ -3,7 +3,8 @@ import { pageData } from '../../data'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Projectitem from '../components/Projectitem'
-
+import CustomCursor from '../components/CustomCursor/index'
+import CustomManager from '../components/CustomCursor/CursorManager'
 
 export default function Home() {
   const menuItems = useRef(null);
@@ -71,15 +72,18 @@ export default function Home() {
 
   return (
     <div>
-        <Header/>
-        <div className='main-container' id='main-container'>
-          <ul ref={menuItems}>
-            {renderItems.map((project, index) => (
-               <Projectitem key={index} project={project} itemIndex={index} />
-             ))}
-           </ul>
-        </div>
-        <Footer/>
+       <CustomManager>
+         <CustomCursor/>
+            <Header/>
+            <div className='main-container' id='main-container'>
+              <ul ref={menuItems}>
+                {renderItems.map((project, index) => (
+                  <Projectitem key={index} project={project} itemIndex={index} />
+                ))}
+              </ul>
+            </div>
+            <Footer/>
+        </CustomManager>
     </div>
   )
 }

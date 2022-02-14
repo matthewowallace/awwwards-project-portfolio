@@ -1,10 +1,11 @@
-import React, {useRef, useReducer} from "react";
+import React, {useRef, useReducer, useContext} from "react";
 import { Hash } from "react-feather";
 import "./style.scss";
 import Title from "./Title";
 import Image from "./image";
 import animate from "./animate";
 import cn from "classnames";
+import { CursorContext } from "../CustomCursor/CursorManager";
 
 const initialState ={
     opacity: 0,
@@ -62,6 +63,7 @@ function reducer (state, action){
 
 export default function Projectitem({project, itemIndex}){
     const listItem = useRef(null);
+    const {setSize} = useContext(CursorContext)
     const [state, dispatch] = useReducer(reducer, initialState);
     const easeMethod = 'easeInOutCubic';
     const parallax = (event) => {
@@ -78,6 +80,7 @@ export default function Projectitem({project, itemIndex}){
         handleRotation(state.rotationPosition, 500);
         listItem.current.addEventListener('mousemove', parallax);
         dispatch({type: 'MOUSE/ENTER'})
+        setSize("regular");
     };
 
     const handleOpacity = (initalOpacity, newOpacity, duration) => {
@@ -135,6 +138,7 @@ export default function Projectitem({project, itemIndex}){
         handleScale(1,initialState.scale, 500);
         handleRotation(state.rotationPosition, 500);
         dispatch({type: 'MOUSE/LEAVE'})
+        setSize("small");
     };
 
     return(

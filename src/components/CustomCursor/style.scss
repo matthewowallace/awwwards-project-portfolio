@@ -1,0 +1,37 @@
+@import '../../styles/minins.scss';
+
+.secondary-cursor{
+    z-index: 1000;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--main-color);
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    position: fixed;
+    background: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    transition: width 0.5s cubic-bezier(0.19, 1, 0.22, 1) ease-in-out, height 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: center;
+
+
+    &.regular{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &.medium{
+        width: 4rem;
+        height: 4rem;
+    }
+    &.small{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    @include mq('tablet', max){
+        display: none;
+    }
+}
+

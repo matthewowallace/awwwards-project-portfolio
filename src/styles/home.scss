@@ -61,3 +61,11 @@ body {
       overflow-x: hidden;
   }
 }
+
+html,
+body{
+  &,
+  *{
+    cursor: none;
+  }
+}
